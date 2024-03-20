@@ -1,0 +1,29 @@
+{
+  "name": "distributed-task-scheduler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/server.js",
+    "task-manager": "node dist/taskManager.js",
+    "index": "ts-node src/index.ts",
+    "dev": "concurrently \"npm run start\" \"npm run task-manager\" \"npm run index\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/amqplib": "^0.10.5",
+    "@types/axios": "^0.14.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.12",
+    "amqplib": "^0.10.4",
+    "axios": "^1.7.2",
+    "concurrently": "^8.2.2",
+    "express": "^4.19.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "worker-thread": "^1.1.0"
+  }
+}
